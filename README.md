@@ -29,6 +29,11 @@ Functionalities implemented: <br/>
 - Python 3.12 or above
 - The models detect for CUDA capability, if available they utilise the GPU otherwise the CPU is is used. <br/>The code was developed using an Nvidia GPU.
 
+## Model Configuration
+- Stable diffusion: stable-diffusion-v1-5 https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5
+- CLIP model: ViT-B/32
+- SAM checkpoint: sam_vit_l_0b3195.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+
 ## Sample Results
 
 ![Screenshot 2024-10-21 024809](https://github.com/user-attachments/assets/825e7c30-0fb1-4c8e-acbb-b156f983ac36)<br/>
