@@ -75,7 +75,7 @@ A few polygons along with their coordinates:<br/>
 
 ## Running the Application
 
-1. **Setup your SAM check point in the SAMcheckpoints folder:**
+1. **Setup your SAM checkpoint in the 'SAMcheckpoints' folder:**
 
     Go to https://github.com/facebookresearch/segment-anything?tab=readme-ov-file#model-checkpoints
     and download a checkpoint as per needed and place it inside the 'SAMcheckpoints' folder.<br/>
@@ -84,7 +84,7 @@ A few polygons along with their coordinates:<br/>
 
 2. **Start the Flask backend:**
 
-    Go into the flask_app directory and run the Flask app first.
+    Go into the 'flask_app' directory and run the Flask app first.
 
     ```bash
     python flask_app.py
@@ -94,7 +94,7 @@ A few polygons along with their coordinates:<br/>
 
 3. **Start the Streamlit frontend:**
 
-    Go into the streamlit_app directory and run the Streamlit app.
+    Go into the 'streamlit_app' directory and run the Streamlit app.
 
     ```bash
     streamlit run streamlit_app.py
