@@ -27,7 +27,7 @@ Functionalities implemented: <br/>
 ## Prerequisites
 
 - Python 3.12 or above
-- The models detect for CUDA capability, if available they run on the GPU otherwise on the CPU. <br/>The code was developed using an Nvidia GPU with 4GB VRAM.
+- The models detect for CUDA capability, if available they utilise the GPU otherwise the CPU is is used. <br/>The code was developed using an Nvidia GPU.
 
 ## Sample Results
 
