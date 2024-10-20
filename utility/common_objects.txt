@@ -1,0 +1,241 @@
+a fruit
+an apple  
+a banana  
+a cherry  
+a date  
+an elderberry  
+a fig  
+a grape  
+a honeydew  
+a kiwi  
+a lemon  
+a mango  
+a plum
+a peach
+an orange  
+a papaya  
+a quince  
+a raspberry  
+a strawberry  
+a tangerine   
+a watermelon
+a dragon fruit
+a vegetable
+a broccoli  
+a cabbage  
+a cauliflower  
+a cucumber  
+a lettuce  
+a pea  
+a pepper  
+a potato  
+a pumpkin  
+a spinach  
+a tomato  
+a corn  
+a radish  
+a beet  
+a carrot  
+an onion  
+a garlic  
+a squash  
+a kale  
+a zucchini
+a vehicle
+a bicycle  
+a bus  
+a car  
+a motorcycle  
+a scooter  
+a truck  
+a van  
+a taxi  
+a train  
+a tram  
+a boat  
+a motorbike
+a bike
+a ship  
+a ferry  
+a plane  
+a helicopter  
+a subway  
+a rickshaw  
+a hovercraft  
+a jeep  
+a minivan
+a musical instrument
+an accordion  
+a banjo  
+a bass guitar  
+a cello  
+a clarinet  
+a flute  
+a guitar  
+a harmonica  
+a harp  
+a keyboard  
+a mandolin  
+a marimba  
+a piano  
+a saxophone  
+a tambourine  
+a trombone  
+a trumpet  
+a ukulele  
+a violin  
+a xylophone  
+an animal
+an alligator  
+an alpaca  
+an antelope  
+a bat  
+a bear  
+a bee  
+a bison  
+a cat  
+a chicken  
+a chimpanzee  
+a cow  
+a dog  
+a dolphin  
+a donkey  
+an elephant  
+an emu  
+a falcon  
+a ferret  
+a fish  
+a flamingo  
+a fox  
+a frog  
+a seal
+a shark
+a giraffe  
+a goat  
+a goldfish  
+a gorilla  
+a hamster  
+a hawk  
+a hedgehog  
+a horse  
+a kangaroo  
+a koala  
+a lion  
+a llama  
+a monkey  
+a mouse  
+a octopus  
+a otter  
+a panda  
+a parrot  
+a rabbit  
+a raccoon  
+a sheep  
+a snail  
+a snake  
+a tiger  
+a turtle  
+a whale  
+a zebra  
+an electronic appliance
+an air conditioner  
+a blender  
+a coffee maker  
+a dishwasher  
+a dryer  
+an electric kettle  
+an electric stove  
+a refrigerator  
+a microwave  
+a toaster  
+a vacuum cleaner  
+a washing machine  
+a rice cooker  
+a slow cooker  
+a food processor  
+an iron  
+a water heater  
+a hair dryer  
+a deep fryer  
+a juicer  
+an action camera  
+a smartwatch  
+a tablet  
+a smartphone  
+a drone  
+a fitness tracker  
+a Bluetooth speaker  
+a portable charger  
+a virtual reality headset  
+a gaming console  
+a smart home hub  
+a wireless earbud  
+a digital camera  
+a voice assistant  
+a laptop  
+a smart thermostat  
+a streaming device  
+a power bank  
+a smartwatch  
+a GPS device  
+an apron  
+a belt  
+a blouse  
+a coat  
+a dress  
+a jacket  
+a jumper  
+a pair of gloves  
+a hat  
+a hoodie  
+a pair of jeans  
+a kilt  
+a pair of pants  
+a shirt  
+a skirt  
+a scarf  
+a suit  
+a sweater  
+a t-shirt  
+a pair of shorts  
+a hill
+a rooftop
+a mountain
+a tree
+a field
+a grassy field
+a desert
+a path
+a fence
+a house
+a building
+sky
+clouds
+a flower
+a tractor
+a lake
+a pond
+a river
+a sea
+water
+fire
+a boy
+a girl
+a man
+a woman
+a crowd of people
+an amusement park
+a water bottle
+a glass
+a spoon
+a plate
+a knife
+a chair
+a sofa
+a table
+a vase
+a lamp
+a cheese
+a butter
+a bread slice
+a bowl
