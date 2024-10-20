@@ -19,6 +19,7 @@ The test cases for core functionalities, endpoints, and errors are provided in t
 ## Prerequisites
 
 - Python 3.12 or above
+- The models detect for CUDA capability, if available they run on the GPU otherwise on the CPU. The code was developed using an Nvidia GPU with 4GB VRAM.
 
 ## Installation
 
@@ -58,7 +59,7 @@ The test cases for core functionalities, endpoints, and errors are provided in t
 1. **Setup your SAM check point in the SAMcheckpoints folder:**
 
     Go to https://github.com/facebookresearch/segment-anything?tab=readme-ov-file#model-checkpoints
-    and download a checkpoint as per needed and place it inside the SAMcheckpoints folder.
+    and download a checkpoint as per needed and place it inside the 'SAMcheckpoints' folder.
     Rename it to "model.pth".
 
 
