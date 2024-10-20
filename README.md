@@ -2,6 +2,12 @@
 
 This project consists of a Flask backend and a Streamlit frontend that work together to generate an image, provide basic and advanced CLIP analysis on it based on the keywords provided by the user and by a local dataset respectively. The image is then segmented into masks and polygons of ROI are extracted and visualized on the streamlit frontend.
 The test cases for core functionalities, endpoints, and errors are provided in the flask_app file.
+Functionalities implemented: 
+(Required) Make a pipeline to generate an image with stable diffusion, provide CLIP analysis on it, and then segment the image into ROI.
+(Advanced) Advanced segementation visualization by plotting all the masks to show segmentation boundaries, plot each polygon on a different image, and provide the coordinates of all the polygons.
+
+(NOTE: Docker implementation is underway and the repository will be updated once it is completed.)
+
 
 ## Project Structure
 
@@ -92,6 +98,6 @@ The test cases for core functionalities, endpoints, and errors are provided in t
     pytest <test_case_filename>.py
     ```
     Note: before running the 'test_core.py' file make the below changes in the 'sd.py' and 'sam.py' files:<br/>
-        * sd.py : at line 33, remove "flask_app/" from the file path and save.<br/>
-        * sam.py: at line 20, remove "flask_app/" form the file path and save.<br/>
-        Then only the 'test_core.py' will work otherwise it will show error.
+        - sd.py : at line 33, remove "flask_app/" from the file path and save.<br/>
+        - sam.py: at line 20, remove "flask_app/" form the file path and save.<br/>
+        Then only the 'test_core.py' file will work otherwise it will show an error.
