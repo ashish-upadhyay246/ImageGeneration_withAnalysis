@@ -1,4 +1,4 @@
-# Image Generations, Analysis, and Segmentation
+# Image Generation, Analysis, and Segmentation
 
 This project consists of a Flask backend and a Streamlit frontend that work together to generate an image, provide basic and advanced CLIP analysis on it based on the keywords provided by the user and by a local dataset respectively. The image is then segmented into masks and polygons of ROI are extracted and visualized on the streamlit frontend.<br/>
 The test cases for core functionalities, endpoints, and errors are provided in the 'flask_app' file.<br/> <br/>
