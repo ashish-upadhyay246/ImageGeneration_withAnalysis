@@ -17,7 +17,7 @@ def segment(base64_image):
 
     try:
         image_bgr = cv2.cvtColor(np.array(image_pil), cv2.COLOR_RGB2BGR)
-        sam_checkpoint = "flask_app/SAMcheckpoints/sam_vit_l_0b3195.pth"
+        sam_checkpoint = "flask_app/SAMcheckpoints/model.pth"
         device = "cuda" if torch.cuda.is_available() else "cpu"
         predictor = sam_model_registry["vit_l"](checkpoint=sam_checkpoint).to(device)  # Using vit/L model
 
