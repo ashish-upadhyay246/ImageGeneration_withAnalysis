@@ -31,10 +31,11 @@ Functionalities implemented: <br/>
 ## Sample Results
 
 ![Screenshot 2024-10-21 024809](https://github.com/user-attachments/assets/825e7c30-0fb1-4c8e-acbb-b156f983ac36)
+Output of image generation with basic CLIP analysis:<br/>
 ![Screenshot 2024-10-21 024855](https://github.com/user-attachments/assets/1f55ca6a-751c-49cf-8b63-f74c00824266)
 ![Screenshot 2024-10-21 025050](https://github.com/user-attachments/assets/4d141b11-80aa-4851-ad52-aefc80cb9569)
 
-A few polygons along with their coordinates:
+A few polygons along with their coordinates:<br/>
 ![Screenshot 2024-10-21 025126](https://github.com/user-attachments/assets/5ae3203a-6bcd-46cb-bb8e-ee8a60d307fa)
 ![Screenshot 2024-10-21 025137](https://github.com/user-attachments/assets/198dae32-960e-4a95-a452-138333e646aa)
 ![Screenshot 2024-10-21 025144](https://github.com/user-attachments/assets/f3ee4647-1b1b-4e18-81f2-05f7e2d818a8)
