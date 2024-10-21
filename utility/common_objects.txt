@@ -136,48 +136,7 @@ a snake
 a tiger  
 a turtle  
 a whale  
-a zebra  
-an electronic appliance
-an air conditioner  
-a blender  
-a coffee maker  
-a dishwasher  
-a dryer  
-an electric kettle  
-an electric stove  
-a refrigerator  
-a microwave  
-a toaster  
-a vacuum cleaner  
-a washing machine  
-a rice cooker  
-a slow cooker  
-a food processor  
-an iron  
-a water heater  
-a hair dryer  
-a deep fryer  
-a juicer  
-an action camera  
-a smartwatch  
-a tablet  
-a smartphone  
-a drone  
-a fitness tracker  
-a Bluetooth speaker  
-a portable charger  
-a virtual reality headset  
-a gaming console  
-a smart home hub  
-a wireless earbud  
-a digital camera  
-a voice assistant  
-a laptop  
-a smart thermostat  
-a streaming device  
-a power bank  
-a smartwatch  
-a GPS device  
+a zebra    
 an apron  
 a belt  
 a blouse  
