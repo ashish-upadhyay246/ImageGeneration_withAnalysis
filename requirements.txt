@@ -5,6 +5,7 @@ Flask
 filelock
 Pillow
 pytest
+transformers
 segment_anything
 supervision
 torch
