@@ -86,8 +86,8 @@ Below screenshot depicts the successful implementation of the testing suite<br/>
 
 1. **Setup your SAM checkpoint in the 'SAMcheckpoints' folder:**
 
-    Go to https://github.com/facebookresearch/segment-anything?tab=readme-ov-file#model-checkpoints
-    and download a checkpoint as per needed and place it inside the 'SAMcheckpoints' folder.<br/>
+    Go to https://github.com/facebookresearch/segment-anything?tab=readme-ov-file#model-checkpoints <br/>
+    Download a checkpoint of choice and place it inside the 'SAMcheckpoints' folder.<br/>
     Rename it to "model.pth".
 
 
