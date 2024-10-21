@@ -113,7 +113,7 @@ Below screenshot depicts the successful implementation of the testing suite<br/>
 
 4. **For testing the functionalities:**
 
-    Navigate to the 'flask_app' folder and rutn the 3 test scripts by the following code:
+    Navigate to the 'flask_app' folder and run the 3 test scripts by the following code:
 
     ```bash
     pytest <test_case_filename>.py
