@@ -36,10 +36,11 @@ Functionalities implemented: <br/>
 
 ## Sample Results
 
-![image](https://github.com/user-attachments/assets/1d3287d7-48e9-4a69-9cc7-871bc8dd963d)<br/>
+![image](https://github.com/user-attachments/assets/1d3287d7-48e9-4a69-9cc7-871bc8dd963d)<br/><br/>
 Extended CLIP analysis and Generated masks with segmentation boundaries.<br/>
-![image](https://github.com/user-attachments/assets/0cf2734a-5954-4d75-a00a-1c7953ae0b2a)
-
+![image](https://github.com/user-attachments/assets/0cf2734a-5954-4d75-a00a-1c7953ae0b2a)<br/><br/>
+Visualization of a few polygons along with their coordinates.<br/>
+![polygons](https://github.com/user-attachments/assets/c457c1a9-b388-4865-ad8c-385e5d18b7ec)
 
 ## Testing Output
 Below screenshot depicts the successful implementation of the testing suite<br/>
