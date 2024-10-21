@@ -45,6 +45,8 @@ A few polygons along with their coordinates:<br/>
 ![Screenshot 2024-10-21 025137](https://github.com/user-attachments/assets/198dae32-960e-4a95-a452-138333e646aa)
 ![Screenshot 2024-10-21 025144](https://github.com/user-attachments/assets/f3ee4647-1b1b-4e18-81f2-05f7e2d818a8)
 
+## Testing Output
+![Screenshot 2024-10-21 024511](https://github.com/user-attachments/assets/b5e19262-df73-4ccb-bd64-72543c8ff6bc)
 
 ## Installation
 
