@@ -36,8 +36,7 @@ Functionalities implemented: <br/>
 
 ## Sample Results
 
-![Screenshot 2024-10-21 024809](https://github.com/user-attachments/assets/825e7c30-0fb1-4c8e-acbb-b156f983ac36)<br/>
-![Screenshot 2024-10-21 024855](https://github.com/user-attachments/assets/1f55ca6a-751c-49cf-8b63-f74c00824266)<br/>
+![image](https://github.com/user-attachments/assets/1d3287d7-48e9-4a69-9cc7-871bc8dd963d)
 ![Screenshot 2024-10-21 025050](https://github.com/user-attachments/assets/4d141b11-80aa-4851-ad52-aefc80cb9569)
 
 A few polygons along with their coordinates:<br/>
