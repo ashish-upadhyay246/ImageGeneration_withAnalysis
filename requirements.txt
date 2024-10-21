@@ -9,7 +9,7 @@ segment_anything
 supervision
 torch
 opencv-python
-supervision
+opencv-contrib-python
 matplotlib
 tqdm
 regex
@@ -17,9 +17,6 @@ ftfy
 onnx
 onnxruntime
 pycocotools
-opencv-contrib-python
 Requests
 streamlit
-opencv-contrib-python
-opencv-python
 numpy
