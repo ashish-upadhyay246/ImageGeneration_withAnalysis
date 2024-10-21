@@ -12,7 +12,7 @@ if 'generated' not in st.session_state:
     st.session_state.generated_image_b64 = None
     st.session_state.generated_image = None
 
-st.title("Image Generation, Analysis, and Segmentation Pipeline")
+st.title("Text-to-Image Generation with Multi-Model Analysis")
 col1, col2, col3 = st.columns([1, 2, 2])
 col1.subheader("Input")
 
