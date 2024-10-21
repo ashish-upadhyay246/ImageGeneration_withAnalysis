@@ -36,7 +36,8 @@ Functionalities implemented: <br/>
 
 ## Sample Results
 
-![image](https://github.com/user-attachments/assets/1d3287d7-48e9-4a69-9cc7-871bc8dd963d)
+![image](https://github.com/user-attachments/assets/1d3287d7-48e9-4a69-9cc7-871bc8dd963d)<br/>
+Extended CLIP analysis and Generated masks with segmentation boundaries.<br/>
 ![image](https://github.com/user-attachments/assets/0cf2734a-5954-4d75-a00a-1c7953ae0b2a)
 
 
