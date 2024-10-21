@@ -88,7 +88,7 @@ Below screenshot depicts the successful implementation of the testing suite<br/>
 
     Go to https://github.com/facebookresearch/segment-anything?tab=readme-ov-file#model-checkpoints <br/>
     Download a checkpoint of choice and place it inside the 'SAMcheckpoints' folder.<br/>
-    Rename it to "model.pth".
+    Rename the checkpoint file to "model.pth".
 
 
 2. **Start the Flask backend:**
