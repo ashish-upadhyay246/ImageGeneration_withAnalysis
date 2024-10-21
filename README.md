@@ -35,15 +35,15 @@ Functionalities implemented: <br/>
 - SAM checkpoint: sam_vit_l_0b3195.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 
 ## Sample Results
-Text-to-Image generation and basic CLIP analysis on provided keywords.<br/>
+<br/>Text-to-Image generation and basic CLIP analysis on provided keywords.<br/>
 ![Screenshot 2024-10-21 115324](https://github.com/user-attachments/assets/473c8583-0242-4ba1-8f26-546f3bad4224)<br/><br/><br/>
 Extended CLIP analysis and Generated masks with segmentation boundaries.<br/>
 ![image](https://github.com/user-attachments/assets/0cf2734a-5954-4d75-a00a-1c7953ae0b2a)<br/><br/><br/>
 Visualization of a few polygons along with their coordinates.<br/>
-![polygons](https://github.com/user-attachments/assets/c457c1a9-b388-4865-ad8c-385e5d18b7ec)<br/>
+![polygons](https://github.com/user-attachments/assets/c457c1a9-b388-4865-ad8c-385e5d18b7ec)<br/><br/>
 
 ## Testing Output
-Below screenshot depicts the successful implementation of the testing suite<br/>
+<br/>Below screenshot depicts the successful implementation of the testing suite<br/>
 ![Screenshot 2024-10-21 024511](https://github.com/user-attachments/assets/3efa38d9-eaa6-4ec6-bba8-2acb6e61904f)
 
 ## Installation
