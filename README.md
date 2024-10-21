@@ -46,6 +46,7 @@ A few polygons along with their coordinates:<br/>
 ![Screenshot 2024-10-21 025144](https://github.com/user-attachments/assets/f3ee4647-1b1b-4e18-81f2-05f7e2d818a8)
 
 ## Testing Output
+Below screenshot depicts the successful implementation of the testing suite<br/>
 ![Screenshot 2024-10-21 024511](https://github.com/user-attachments/assets/3efa38d9-eaa6-4ec6-bba8-2acb6e61904f)
 
 ## Installation
