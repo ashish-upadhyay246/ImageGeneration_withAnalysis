@@ -27,7 +27,7 @@ Functionalities implemented: <br/>
 ## Prerequisites
 
 - Python 3.12 or above
-- The models detect for CUDA capability, if available they utilise the GPU otherwise the CPU is is used. <br/>The code was developed using an Nvidia GPU.
+- The models detect for CUDA capability, if available they utilise the GPU otherwise the CPU is used. <br/>The code was developed using an Nvidia GPU.
 
 ## Model Configuration
 - Stable diffusion: stable-diffusion-v1-5 https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5
