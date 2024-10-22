@@ -109,7 +109,7 @@ Below screenshot depicts the successful implementation of the testing suite<br/>
     The Streamlit app will open in your default web browser.
 
 4. **For testing the functionalities:**
-    Ensure that the flask server is running.<br/>
+    <br/>Ensure that the flask server is running.<br/>
     After that, navigate to the 'flask_app' folder and run the 3 test scripts by the following code:
 
     ```bash
