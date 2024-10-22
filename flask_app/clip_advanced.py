@@ -11,9 +11,8 @@ def clip_img(img_b64):
     except Exception as e:
         return {"error": f"Failed to decode image: {str(e)}"}
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-
     try:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
         model, preprocess = clip.load("ViT-L/14", device=device)
     except Exception as e:
         return {"error": f"Failed to load CLIP model: {str(e)}"}
@@ -29,9 +28,8 @@ def clip_img(img_b64):
             probs = logits_per_image.softmax(dim=-1).cpu().numpy()
     except Exception as e:
         return {"error": f"Failed during preprocessing or inference: {str(e)}"}
-
     confidence_scores = probs[0] * 100
     ans = {description: float(confidence) for description, confidence in zip(text_descriptions, confidence_scores)}
     sorted_ans = sorted(ans.items(), key=lambda item: item[1], reverse=True)[:5]
-
+    
     return dict(sorted_ans)
