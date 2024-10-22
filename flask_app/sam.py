@@ -19,7 +19,7 @@ def segment(base64_image):
         image_bgr = cv2.cvtColor(np.array(image_pil), cv2.COLOR_RGB2BGR)
         sam_checkpoint = "flask_app/SAMcheckpoints/model.pth"
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        predictor = sam_model_registry["vit_l"](checkpoint=sam_checkpoint).to(device)  # Using vit/L model
+        predictor = sam_model_registry["vit_l"](checkpoint=sam_checkpoint).to(device)
 
         mask_generator = SamAutomaticMaskGenerator(
             predictor,
@@ -30,8 +30,8 @@ def segment(base64_image):
         sam2_result = mask_generator.generate(image_bgr)
 
         masks = [mask['segmentation'] for mask in sorted(sam2_result, key=lambda x: x['area'], reverse=True)]
-
         polygons = []
+        
         for mask in masks:
             mask_uint8 = (mask * 255).astype(np.uint8)
             contours, _ = cv2.findContours(mask_uint8, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
