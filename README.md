@@ -116,6 +116,6 @@ Below screenshot depicts the successful implementation of the testing suite<br/>
     pytest <test_case_filename>.py
     ```
     Note: before running the 'test_core.py' file make the below changes in the 'sd.py' and 'sam.py' files:<br/>
-        - sd.py : at line 33, remove "flask_app/" from the file path and save.<br/>
+        - sd.py : at line 35, remove "flask_app/" from the file path and save.<br/>
         - sam.py: at line 20, remove "flask_app/" form the file path and save.<br/>
         Then only the 'test_core.py' file will work otherwise it will show an error.
