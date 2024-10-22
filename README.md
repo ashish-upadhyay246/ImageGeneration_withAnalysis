@@ -43,7 +43,7 @@ Functionalities implemented: <br/>
 ![polygons](https://github.com/user-attachments/assets/c457c1a9-b388-4865-ad8c-385e5d18b7ec)<br/><br/>
 
 ## Testing Output
-Below screenshot depicts the successful implementation of the testing suite<br/>
+*Below screenshot depicts the successful implementation of the testing suite*<br/>
 ![Screenshot 2024-10-21 024511](https://github.com/user-attachments/assets/3efa38d9-eaa6-4ec6-bba8-2acb6e61904f)
 
 ## Installation
