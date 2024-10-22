@@ -3,10 +3,7 @@ import base64
 from PIL import Image
 import io
 from unittest.mock import patch
-import sd
-import sam
-import clip_basic
-import clip_advanced
+import sd, sam, clip_basic, clip_advanced
 
 image = Image.new('RGB', (128, 128), color='blue')
 buffered = io.BytesIO()
@@ -46,6 +43,7 @@ def test_segment_errors():
     assert "Failed to decode and open image" in result["error"]
 
 def test_clip_img_errors_with_text():
+    #testing clip_basic
     #empty image
     result = clip_basic.clip_img("", ["A cat", "A dog"])
     assert "error" in result
