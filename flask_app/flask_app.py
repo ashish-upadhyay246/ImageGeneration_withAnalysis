@@ -8,10 +8,10 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
+#endpoint for generating the image and providing basic CLIP analysis
 @app.route('/generate', methods=['POST'])
 def generate_img():
-    logger.debug("Entered generate_img method")
+    logger.debug("Entered generate_img() method")
     try:
         data = request.json
 
@@ -27,6 +27,7 @@ def generate_img():
         h = data.get('height', 512)
         w = data.get('width', 768)
 
+        #validating endpoint
         for field, value in [('samples', num_inference_steps), ('cfg', guidance_scale), ('height', h), ('width', w)]:
             if not isinstance(value, (int, float)) or value <= 0:
                 logger.warning(f"Validation error: '{field}' must be a positive number.")
@@ -35,8 +36,12 @@ def generate_img():
         logger.info(f"Received request for image generation with prompt: {data['prompt']}, labels: {labels_list}")
 
         image_b64 = sd.stable_diff(data['prompt'], num_inference_steps, guidance_scale, h, w)
-        logger.debug("Stable diffusion image generation completed")
-        print(image_b64)
+        if isinstance(image_b64,dict):
+            logger.debug("Could not generate image. Problem occured while either loading the pipeline or saving the image.")
+            print(image_b64)
+        else:
+            logger.debug("Stable diffusion image generation completed")
+
         clip_scores = clip_basic.clip_img(image_b64, labels_list)
         logger.debug("Basic CLIP analysis completed")
 
@@ -48,16 +53,17 @@ def generate_img():
                 "confidence_scores": clip_scores
             }
         }
-        logger.info("Image generation and analysis successful")
+        logger.info("Image generation and analysis successful. Displaying the image, please wait...")
         return jsonify(response)
     except Exception as e:
-        logger.error(f"Error in generate_img: {e}", exc_info=True)
+        logger.error(f"Error occured in generate_img() function: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 
+#endpoint for providing extended CLIP analysis and image segmentation
 @app.route('/analyze', methods=['POST'])
 def analyze_image():
-    logger.debug("Entered analyze_image method")
+    logger.debug("Entered analyze_image() method")
     try:
         data = request.json
 
@@ -89,11 +95,11 @@ def analyze_image():
                 "polygons": polygons
             }
         }
-        logger.info("Image analysis and segmentation successful")
+        logger.info("Image analysis and segmentation successful. Displaying the masks and ROI, please wait...")
         return jsonify(response)
     except Exception as e:
-        logger.error(f"Error in analyze_image: {e}", exc_info=True)
+        logger.error(f"Error occured in analyze_image() method: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
