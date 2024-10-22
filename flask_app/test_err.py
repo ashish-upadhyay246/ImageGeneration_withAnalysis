@@ -1,69 +1,98 @@
-import unittest
-import sd, sam, clip_basic, clip_advanced
+import pytest
+import base64
+from PIL import Image
+import io
+from unittest.mock import patch
+import sd
+import sam
+import clip_basic
+import clip_advanced
 
-class TestFunctions(unittest.TestCase):
+image = Image.new('RGB', (128, 128), color='blue')
+buffered = io.BytesIO()
+image.save(buffered, format="JPEG")
+valid_base64_string = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-    def test_stable_diff_errors(self):
-        #empty prompt
-        result = sd.stable_diff("", 50, 7.5, 512, 512)
-        self.assertIn("error", result)
-        self.assertIn("Invalid prompt. The prompt cannot be empty.", result["error"])
-        
-        #witspace prompt
-        result = sd.stable_diff("   ", 50, 7.5, 512, 512)
-        self.assertIn("error", result)
-        self.assertIn("Invalid prompt. The prompt cannot be empty.", result["error"])
-        
-        #invalid height
-        result = sd.stable_diff("A beautiful sunset", 50, 7.5, 0, 512)
-        self.assertIn("error", result)
-        self.assertIn("Invalid dimensions. Height and width must be greater than zero.", result["error"])
-        
-        #invalid width
-        result = sd.stable_diff("A beautiful sunset", 50, 7.5, 512, 0)
-        self.assertIn("error", result)
-        self.assertIn("Invalid dimensions. Height and width must be greater than zero.", result["error"])
+def test_stable_diff_errors():
+    #empty prompt
+    result = sd.stable_diff("", 50, 7.5, 512, 512)
+    assert "error" in result
+    assert "Invalid prompt. The prompt cannot be empty." in result["error"]
+    
+    #whitespace prompt
+    result = sd.stable_diff("   ", 50, 7.5, 512, 512)
+    assert "error" in result
+    assert "Invalid prompt. The prompt cannot be empty." in result["error"]
+    
+    #invalid height
+    result = sd.stable_diff("A beautiful sunset", 50, 7.5, 0, 512)
+    assert "error" in result
+    assert "Invalid dimensions. Height and width must be greater than zero." in result["error"]
+    
+    #invalid width
+    result = sd.stable_diff("A beautiful sunset", 50, 7.5, 512, 0)
+    assert "error" in result
+    assert "Invalid dimensions. Height and width must be greater than zero." in result["error"]
 
+def test_segment_errors():
+    #invalid base64 image
+    result = sam.segment("invalid_base64_string")
+    assert "error" in result
+    assert "Failed to decode and open image" in result["error"]
 
-    def test_segment_errors(self):
-        #invalid base64 img
-        result = sam.segment("invalid_base64_string")
-        self.assertIn("error", result)
-        self.assertIn("Failed to decode and open image", result["error"])
+    #incompatible datatype
+    result = sam.segment(None)
+    assert "error" in result
+    assert "Failed to decode and open image" in result["error"]
 
-        #incompatible datatype
-        result = sam.segment(None)
-        self.assertIn("error", result)
-        self.assertIn("Failed to decode and open image", result["error"])
+def test_clip_img_errors_with_text():
+    #empty image
+    result = clip_basic.clip_img("", ["A cat", "A dog"])
+    assert "error" in result
+    assert "Failed to decode image" in result["error"]
 
-    def test_clip_img_errors_with_text(self):
-        #empty image
-        result = clip_basic.clip_img("", ["A cat", "A dog"])
-        self.assertIn("error", result)
-        self.assertIn("Failed to decode image", result["error"])
+    #invalid image
+    result = clip_basic.clip_img("invalid_base64_string", ["A cat", "A dog"])
+    assert "error" in result
+    assert "Failed to decode image" in result["error"]
 
-        #invalid image
-        result = clip_basic.clip_img("invalid_base64_string", ["A cat", "A dog"])
-        self.assertIn("error", result)
-        self.assertIn("Failed to decode image", result["error"])
+def test_clip_img_errors_without_text():
+    #testing clip_basic()
+    #empty image
+    result_basic = clip_basic.clip_img("", ["A cat", "A dog"])
+    assert "error" in result_basic
+    assert "Failed to decode image" in result_basic["error"]
 
-    def test_clip_img_errors_without_text(self):
-        #empty image
-        result = clip_advanced.clip_img("")
-        self.assertIn("error", result)
-        self.assertIn("Failed to decode image", result["error"])
+    #invalid base64 image string
+    result_basic = clip_basic.clip_img("invalid_base64_string", ["A cat", "A dog"])
+    assert "error" in result_basic
+    assert "Failed to decode image" in result_basic["error"]
 
-        #util function not present
-        try:
-            result = clip_advanced.clip_img("valid_base64_string")
-        except Exception as e:
-            self.assertIn("error", str(e))
+    #simulating model loading failure
+    with patch("clip.load", side_effect=Exception("Failed to load CLIP model")):
+        result_basic = clip_basic.clip_img(valid_base64_string, ["A cat", "A dog"])
+        assert "error" in result_basic
+        assert "Failed to load CLIP model" in result_basic["error"]
 
-        #model loading failure
-        try:
-            result = clip_advanced.clip_img("valid_base64_string")
-        except Exception as e:
-            self.assertIn("error", str(e))
+    #testing clip_advanced
+    #empty image string
+    result_advanced = clip_advanced.clip_img("")
+    assert "error" in result_advanced
+    assert "Failed to decode image" in result_advanced["error"]
 
-if __name__ == '__main__':
-    unittest.main()
+    #invalid base64 image string
+    result_advanced = clip_advanced.clip_img("invalid_base64_string")
+    assert "error" in result_advanced
+    assert "Failed to decode image" in result_advanced["error"]
+
+    #simulating model loading failure
+    with patch("clip.load", side_effect=Exception("Failed to load CLIP model")):
+        result_advanced = clip_advanced.clip_img(valid_base64_string)
+        assert "error" in result_advanced
+        assert "Failed to load CLIP model" in result_advanced["error"]
+
+    #inference failure test
+    with patch("clip_advanced.clip.tokenize", side_effect=Exception("Failed during preprocessing or inference")):
+        result_advanced = clip_advanced.clip_img(valid_base64_string)
+        assert "error" in result_advanced
+        assert "Failed during preprocessing or inference" in result_advanced["error"]
