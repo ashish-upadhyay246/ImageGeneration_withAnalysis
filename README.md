@@ -32,7 +32,7 @@ Functionalities implemented: <br/>
 ## Model Configuration
 - Stable diffusion: stable-diffusion-v1-5 https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5
 - CLIP model: ViT-L/14
-- SAM checkpoint: sam_vit_l_0b3195.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+- SAM checkpoint: SAM ViT-L https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 
 ## Sample Results
 *Text-to-Image generation and basic CLIP analysis on provided keywords.*<br/>
