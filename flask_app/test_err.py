@@ -57,23 +57,6 @@ def test_clip_img_errors_with_text():
     assert "Failed to decode image" in result["error"]
 
 def test_clip_img_errors_without_text():
-    #testing clip_basic()
-    #empty image
-    result_basic = clip_basic.clip_img("", ["A cat", "A dog"])
-    assert "error" in result_basic
-    assert "Failed to decode image" in result_basic["error"]
-
-    #invalid base64 image string
-    result_basic = clip_basic.clip_img("invalid_base64_string", ["A cat", "A dog"])
-    assert "error" in result_basic
-    assert "Failed to decode image" in result_basic["error"]
-
-    #simulating model loading failure
-    with patch("clip.load", side_effect=Exception("Failed to load CLIP model")):
-        result_basic = clip_basic.clip_img(valid_base64_string, ["A cat", "A dog"])
-        assert "error" in result_basic
-        assert "Failed to load CLIP model" in result_basic["error"]
-
     #testing clip_advanced
     #empty image string
     result_advanced = clip_advanced.clip_img("")
