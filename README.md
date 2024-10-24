@@ -22,7 +22,7 @@ Functionalities implemented: <br/>
 - `test_endpoints.py`: pytest test cases to test the endpoints '/generate' and '/analyze'.
 - `test_err.py`: pytest test cases to test if the errors are being handled as needed.
 - `util.py`: a utility script containing code to give a pop up of the generated and the annotated image after mask generation, and to provide a pop up showing all the polygons extracted from the masks.
-- `common_objects.py`: contains a list of common objects to provide a dataset for extensive CLIP analysis.
+- `common_objects.txt`: contains a list of common objects to provide a dataset for extensive CLIP analysis.
 
 ## Prerequisites
 
