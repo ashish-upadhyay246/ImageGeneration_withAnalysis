@@ -6,8 +6,6 @@ Functionalities implemented: <br/>
 (Required) Make a pipeline to generate an image with stable diffusion, provide CLIP analysis on it, and then segment the image into ROI.<br/>
 (Advanced) Advanced segementation visualization by plotting all the masks to show segmentation boundaries, plot each polygon on a different image, and provide the coordinates of all the polygons.<br/>
 
-(NOTE: Docker implementation is underway and the repository will be updated once it is completed.)
-
 
 ## Project Structure
 
