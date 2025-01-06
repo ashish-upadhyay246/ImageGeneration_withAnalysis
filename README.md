@@ -100,16 +100,3 @@ Functionalities implemented: <br/>
     ```
 
     The Streamlit app will open in your default web browser.
-
-4. **For testing the functionalities:**
-
-    Ensure that the flask server is running.<br/>
-    After that, navigate to the 'flask_app' folder and run the 3 test scripts by the following code:
-
-    ```bash
-    pytest <test_case_filename>.py
-    ```
-    NOTE: before running the 'test_core.py' file make the below changes in the 'sd.py' and 'sam.py' files:<br/>
-        - sd.py : at line 35, remove "flask_app/" from the file path and save.<br/>
-        - sam.py: at line 20, remove "flask_app/" form the file path and save.<br/>
-        Then only the 'test_core.py' file will work otherwise it will show an error.
